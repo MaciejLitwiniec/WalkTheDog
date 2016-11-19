@@ -64,6 +64,15 @@ body, html {
 
 <!-- Facebook snippet --> 
 <script>
+window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '596868103830627',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -96,16 +105,6 @@ function statusChangeCallback(response) {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
     });
-  };
-
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '596868103830627',
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();
   };
 
 
