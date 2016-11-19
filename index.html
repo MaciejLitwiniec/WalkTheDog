@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<title>Walk The Dog!</title>
+<link rel="icon" href="resources/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("resources/background.jpg");
+    min-height: 100%;
+}
+.w3-navbar li a {
+    padding: 16px;
+    float: left;
+}
+#logo {
+  width: 24px;
+  height: 24px;
+}
+
+.stroke
+{
+    color: white;
+    text-shadow:
+    1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000;  
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <ul class="w3-navbar w3-white w3-card-2" id="myNavbar">
+    <li>
+      <a href="#home" class="w3-slim"><img id="logo" src="resources/logo.jpg"></a>
+    </li>
+    <!-- Right-sided navbar links -->
+    <li class="w3-right w3-hide-small">
+      <a href="#about"><i class="fa fa-question-circle-o"></i> ABOUT</a>
+      <a href="#photo"><i class="fa fa-th"></i> PHOTO</a>
+      <a href="#team"><i class="fa fa-user"></i> TEAM</a>
+      <!--<a href="#pricing"><i class="fa fa-usd"></i> PRICING</a> -->
+      <a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a>
+    </li>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <li>
+      <a href="javascript:void(0)" class="w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars w3-padding-right w3-padding-left"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Sidenav on small screens when clicking the menu icon -->
+<nav class="w3-sidenav w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-large w3-padding-16">Close X</a>
+  <a href="#about" onclick="w3_close()">ABOUT</a>
+  <a href="#photo" onclick="w3_close()">PHOTO</a>
+  <a href="#team" onclick="w3_close()">TEAM</a>
+  <!--<a href="#pricing" onclick="w3_close()">PRICING</a>-->
+  <a href="#contact" onclick="w3_close()">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+
+  <div class="w3-display-bottomleft w3-padding-xxlarge w3-text-white">
+    <!-- hides on small screens -->
+    <span class="w3-jumbo w3-hide-small stroke">Start something that matters!</span><br>
+    <!-- hides on medium+ screens --> 
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium stroke">Start something that matters!</span><br>
+    <span class="w3-large stroke">Use your time in a good way.</span>
+    <p><a href="#about" class="w3-btn w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Facebook login?</a></p>
+  </div>
+  
+</header>
+
+<!-- About Section -->
+<div class="w3-container w3-padding-128" id="about">
+  <h3 class="w3-center">ABOUT THE COMPANY</h3>
+  <p class="w3-center w3-large">Key features of our company</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-third">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Simplicity</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Passion</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-handshake-o w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Support</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">14+</span>
+    <br>Partners
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">120+</span>
+    <br>Happy dogs
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">90+</span>
+    <br>Walkers
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Walk kilometers
+  </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container w3-padding-128" id="photo">
+  <h3 class="w3-center">Photo gallery</h3>
+  <p class="w3-center w3-large">Your photos</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="resources/photo1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo1">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo2">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo3">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo4">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="resources/photo5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo5">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo6">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo7">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo8">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- Team Section -->
+<div class="w3-container w3-padding-128 w3-light-grey" id="team">
+  <h3 class="w3-center">THE TEAM</h3>
+  <p class="w3-center w3-large">The ones who runs this company</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="resources/boss.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-btn-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="resources/branchmanager.jpg" alt="Waffles" style="width:100%">
+        <div class="w3-container">
+          <h3>Waffles</h3>
+          <p class="w3-opacity">Branch Manager</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-btn-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="resources/assistantbranchmanager.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Mike</h3>
+          <p class="w3-opacity">Assistant Branch Manager</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-btn-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="resources/designer.jpg" alt="Dan" style="width:100%">
+        <div class="w3-container">
+          <h3>McChase</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-btn-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-padding-128 w3-white" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Warsaw, PL</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+      <br>
+      <form action="form.asp" target="_blank">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <button class="w3-btn w3-padding" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+    </div>
+    <div class="w3-half">
+      <!-- Add Google Maps -->
+      <div id="googleMap" style="width:100%;height:510px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#top" class="w3-btn w3-padding w3-light-grey w3-hover-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
+    <i class="fa fa-flickr w3-hover-text-red"></i>
+    <i class="fa fa-instagram w3-hover-text-purple"></i>
+    <i class="fa fa-twitter w3-hover-text-light-blue"></i>
+    <i class="fa fa-linkedin w3-hover-text-indigo"></i>
+  </div>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+<!-- Google Map Location -->
+var myCenter = new google.maps.LatLng(52.230258, 20.999242);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 15,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidenav when clicking the menu icon
+var mySidenav = document.getElementById("mySidenav");
+
+function w3_open() {
+    if (mySidenav.style.display === 'block') {
+        mySidenav.style.display = 'none';
+    } else {
+        mySidenav.style.display = 'block';
+    }
+}
+
+// Close the sidenav with the close button
+function w3_close() {
+    mySidenav.style.display = "none";
+}
+
+
+//smooth scrolling
+$("a[href='#top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+
+ $(document).ready(function (){
+            $("a[href='#about']").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#about").offset().top
+                }, 1000);
+            });
+        });
+
+ $(document).ready(function (){
+            $("a[href='#photo']").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#photo").offset().top
+                }, 1000);
+            });
+        });
+
+ $(document).ready(function (){
+            $("a[href='#team']").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#team").offset().top
+                }, 1000);
+            });
+        });
+
+  $(document).ready(function (){
+            $("a[href='#contact']").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#contact").offset().top
+                }, 1000);
+            });
+        });
+
+</script>
+
+
+</body>
+</html>
+
