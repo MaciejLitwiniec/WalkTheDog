@@ -85,7 +85,7 @@ function statusChangeCallback(response) {
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
     }
-  }
+  };
 
 //=========================
 
@@ -96,7 +96,7 @@ function statusChangeCallback(response) {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
     });
-  }
+  };
 
 
   window.fbAsyncInit = function() {
@@ -125,7 +125,6 @@ function statusChangeCallback(response) {
     statusChangeCallback(response);
   });
 
-  };
 
   // Load the SDK asynchronously
   (function(d, s, id){
@@ -146,7 +145,7 @@ function statusChangeCallback(response) {
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
-  }
+  };
 
 
 
