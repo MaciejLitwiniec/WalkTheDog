@@ -81,13 +81,14 @@ TODO
         the JavaScript SDK to present a graphical Login button that triggers
         the FB.login() function when clicked.
         -->
-
-      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="xlarge" 
+                       data-show-faces="false" data-auto-logout-link="true">
       </fb:login-button>
 
       <div id="status">
       </div>
-      
+
       </p>
     </div>
   </div>
@@ -281,6 +282,8 @@ TODO
 
 <script src="GoogleMapsHandler.js"></script>
 <script src="main.js"></script>
+
+<!-- Facebook login -->
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
