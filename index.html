@@ -70,10 +70,26 @@ TODO
 
   <div class="w3-display-bottomleft w3-padding-xxlarge w3-text-white">
     <!-- hides on small screens -->
-    <span class="w3-jumbo w3-hide-small stroke">Start something that matters!</span><br>
+    <div class="w3-jumbo w3-hide-small stroke">Start something that matters!</div><br>
     <!-- hides on medium+ screens --> 
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium stroke">Start something that matters!</span><br>
-    <span class="w3-large stroke">Use your time in a good way.</span>
+    <div class="w3-xxlarge w3-hide-large w3-hide-medium stroke">Start something that matters!</div><br>
+    <div class="w3-large stroke">Use your time in a good way.</div>
+    <div class="w3-card-4 w3-light-grey w3-round-xxlarge w3-third">
+      <p>
+        <!--
+        Below we include the Login Button social plugin. This button uses
+        the JavaScript SDK to present a graphical Login button that triggers
+        the FB.login() function when clicked.
+        -->
+
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+      </fb:login-button>
+
+      <div id="status">
+      </div>
+      
+      </p>
+    </div>
   </div>
   
 </header>
@@ -357,17 +373,7 @@ TODO
 
 </script>
 
-<!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
 
 </body>
 </html>
