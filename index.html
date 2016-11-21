@@ -374,7 +374,13 @@ TODO
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-        window.location.replace("browser.html").delay(5000);
+        setTimeout(
+          function() 
+          {
+            console.log("waiting 5 seconds");
+            window.location.replace("browser.html");  
+          }, 5000);
+        
     });
   }
 
