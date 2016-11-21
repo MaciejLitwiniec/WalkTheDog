@@ -3,6 +3,7 @@ Used technologies:
 - HTML
 - CSS (W3.CSS, Font Awesome)
 - JavaScript/jQuery
+- Facebook SDK (Facebook Connect/Login with Facebook)
 - Google Maps API
 - Github repository
  -->
@@ -10,7 +11,7 @@ Used technologies:
 
 <!-- 
 TODO
-- Facebook SDK (Facebook Connect/Login with Facebook)
+- 
 - NodeJS routes?
 - NodeJS+MongoDB?
 - Przepisac w3.css na bootstrap?
@@ -84,7 +85,6 @@ TODO
         the JavaScript SDK to present a graphical Login button that triggers
         the FB.login() function when clicked.
         -->
-
       <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="xlarge" 
                        data-show-faces="false" data-auto-logout-link="true">
       </fb:login-button>
@@ -330,6 +330,9 @@ TODO
     version    : 'v2.8' // use graph api version 2.8
   });
 
+  FB.Event.subscribe('auth.login', function () {
+          window.location = "http://example.com";
+  });
 
   ///////////////////////////////////////////////////////////////////////
 
