@@ -330,9 +330,7 @@ TODO
     version    : 'v2.8' // use graph api version 2.8
   });
 
-  FB.Event.subscribe('auth.login', function () {
-          window.location = "http://example.com";
-  });
+  
 
   ///////////////////////////////////////////////////////////////////////
 
@@ -377,8 +375,11 @@ TODO
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+        window.location.replace("http://stackoverflow.com");
     });
   }
+
+
 
 </script>
 
