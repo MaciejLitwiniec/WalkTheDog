@@ -1,0 +1,395 @@
+<!-- 
+Used technologies:
+- HTML
+- CSS (W3.CSS, Font Awesome)
+- JavaScript/jQuery
+- Facebook SDK (Facebook Connect/Login with Facebook)
+- Google Maps API
+- Github repository
+ -->
+
+
+<!-- 
+TODO
+- 
+- NodeJS routes?
+- NodeJS+MongoDB?
+- Przepisac w3.css na bootstrap?
+
+-->
+
+<!DOCTYPE html>
+<html>
+<title>Walk The Dog!</title>
+<link rel="icon" href="resources/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="stylesheet.css">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfgb8CwlGaxmTq7raACwVaJ3qtA4ylOb8" type="text/javascript"></script>
+<script src="GoogleMapsHandler.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <ul class="w3-navbar w3-white w3-card-2" id="myNavbar">
+    <li>
+      <a href="#home" class="w3-slim"><img id="logo" src="resources/logo.jpg"></a>
+    </li>
+    <!-- Right-sided navbar links -->
+    <li class="w3-right w3-hide-small">
+      <a href="#about"><i class="fa fa-question-circle-o"></i> ABOUT</a>
+      <a href="#photo"><i class="fa fa-th"></i> PHOTO</a>
+      <a href="#team"><i class="fa fa-user"></i> TEAM</a>
+      <!--<a href="#pricing"><i class="fa fa-usd"></i> PRICING</a> -->
+      <a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a>
+    </li>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <li>
+      <a href="javascript:void(0)" class="w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars w3-padding-right w3-padding-left"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Sidenav on small screens when clicking the menu icon -->
+<nav class="w3-sidenav w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-large w3-padding-16">Close X</a>
+  <a href="#about" onclick="w3_close()">ABOUT</a>
+  <a href="#photo" onclick="w3_close()">PHOTO</a>
+  <a href="#team" onclick="w3_close()">TEAM</a>
+  <!--<a href="#pricing" onclick="w3_close()">PRICING</a>-->
+  <a href="#contact" onclick="w3_close()">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+
+  <div class="w3-display-bottomleft w3-padding-xxlarge w3-text-white">
+    <!-- hides on small screens -->
+    <div class="w3-jumbo w3-hide-small stroke">Start something that matters!</div><br>
+    <!-- hides on medium+ screens --> 
+    <div class="w3-xxlarge w3-hide-large w3-hide-medium stroke">Start something that matters!</div><br>
+    <div class="w3-large stroke">Use your time in a good way.</div>
+    <div class="w3-card-4 w3-light-grey w3-round-xxlarge w3-third">
+      <p>
+        <!--
+        Below we include the Login Button social plugin. This button uses
+        the JavaScript SDK to present a graphical Login button that triggers
+        the FB.login() function when clicked.
+        -->
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="xlarge" 
+                       data-show-faces="false" data-auto-logout-link="true">
+      </fb:login-button>
+
+      <div id="status">
+      </div>
+
+      </p>
+    </div>
+  </div>
+  
+</header>
+
+<!-- About Section -->
+<div class="w3-container w3-padding-128" id="about">
+  <h3 class="w3-center">ABOUT THE COMPANY</h3>
+  <p class="w3-center w3-large">Key features of our company</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-third">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Simplicity</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Passion</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-handshake-o w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Support</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">14+</span>
+    <br>Partners
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">120+</span>
+    <br>Happy dogs
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">90+</span>
+    <br>Walkers
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Walk kilometers
+  </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container w3-padding-128" id="photo">
+  <h3 class="w3-center">Photo gallery</h3>
+  <p class="w3-center w3-large">Your photos</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="resources/photo1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo1">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo2">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo3">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo4">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="resources/photo5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo5">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo6">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo7">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="resources/photo8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo8">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- Team Section -->
+<div class="w3-container w3-padding-128 w3-light-grey" id="team">
+  <h3 class="w3-center">THE TEAM</h3>
+  <p class="w3-center w3-large">The ones who runs this company</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="resources/boss.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-btn-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="resources/branchmanager.jpg" alt="Waffles" style="width:100%">
+        <div class="w3-container">
+          <h3>Waffles</h3>
+          <p class="w3-opacity">Branch Manager</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-btn-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="resources/assistantbranchmanager.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Mike</h3>
+          <p class="w3-opacity">Assistant Branch Manager</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-btn-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="resources/designer.jpg" alt="Dan" style="width:100%">
+        <div class="w3-container">
+          <h3>McChase</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-btn-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-padding-128 w3-white" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Warsaw, PL</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+      <br>
+      <form action="form.asp" target="_blank">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <button class="w3-btn w3-padding" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+    </div>
+    <div class="w3-half">
+      <!-- Add Google Maps -->
+      <div id="googleMap" style="width:100%;height:510px;"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#top" class="w3-btn w3-padding w3-light-grey w3-hover-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
+    <i class="fa fa-flickr w3-hover-text-red"></i>
+    <i class="fa fa-instagram w3-hover-text-purple"></i>
+    <i class="fa fa-twitter w3-hover-text-light-blue"></i>
+    <i class="fa fa-linkedin w3-hover-text-indigo"></i>
+  </div>
+</footer>
+
+
+<script src="main.js"></script>
+
+<!-- Facebook login -->
+<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into Facebook.';
+    }
+  }
+
+  ///////////////////////////////////////////////////////////////////////
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '596868103830627',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.8' // use graph api version 2.8
+  });
+
+  
+
+  ///////////////////////////////////////////////////////////////////////
+
+  // Now that we've initialized the JavaScript SDK, we call  
+   // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+
+  ///////////////////////////////////////////////////////////////////////
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+
+
+  ///////////////////////////////////////////////////////////////////////
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+        setTimeout(
+          function() 
+          {
+            console.log("waiting 5 seconds");  
+            window.open("browser.html","_self")
+          }, 5000);
+        
+    });
+  }
+
+
+
+</script>
+
+
+
+</body>
+</html>
+
