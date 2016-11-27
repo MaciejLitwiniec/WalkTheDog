@@ -7,7 +7,7 @@ body, html {
 .bgimg-1 {
     background-position: center;
     background-size: cover;
-    background-image: url("/resources/background.jpg");
+    background-image: url("WalkTheDog/resources/background.jpg");
     min-height: 100%;
 }
 .w3-navbar li a {
