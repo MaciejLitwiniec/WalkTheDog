@@ -1,19 +1,19 @@
 app.controller('MainController', ['$scope', function($scope) {
   $scope.apps = [ 
     { 
-      icon: 'resources/photo1.jpg', 
+      icon: 'resources/photo1cropped.jpg', 
       title: 'MOVE', 
       developer: 'MOVE, Inc.', 
       price: 0.99 
     }, 
     { 
-      icon: 'resources/photo2.jpg', 
+      icon: 'resources/photo2cropped.jpg', 
       title: 'Shutterbugg', 
       developer: 'Chico Dusty', 
       price: 2.99 
     },
     {
-      icon: 'resources/photo3.jpg',
+      icon: 'resources/photo3cropped.jpg',
       title: 'Gameboard',
       developer: 'Armando P.',
       price: 1.99
