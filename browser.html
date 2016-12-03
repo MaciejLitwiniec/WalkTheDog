@@ -1,3 +1,12 @@
+<!-- 
+ToDo:
+1. wyeliminowac konflikt w3-bootstrap/poprawic layout
+2. usunac pusta przestrzen pod footerem
+
+
+ -->
+
+
 <!DOCTYPE html>
 <html>
 <title>Walk The Dog!</title>
@@ -59,8 +68,21 @@
   <h3 class="w3-center">Photo gallery</h3>
   <p class="w3-center w3-large">Your photos</p>
 
+	<div class="main" ng-controller="MainController">
+  	<div class="container">
+    
+   		<div class="w3-row-padding" style="margin-top:64px">
+    	<div class="w3-col l3 m6">
+			<div class="card" ng-repeat="app in apps">
+          		<app-info info="app"></app-info>
+    		</div>
+   		</div>
+	</div>
+	</div>
+	</div>
+</div>
 
-<!-- Main controller section -->
+	<!-- Main controller section
 	<div class="main" ng-controller="MainController">
       <div class="container">
          <div class="card" ng-repeat="app in apps">
@@ -69,7 +91,7 @@
         </div>
       </div>
     </div>
-
+ -->
 
  <!-- To be refactored 
 	 <div ng-repeat="product in products" class="col-md-6"> 
