@@ -1,54 +1,54 @@
 app.controller('MainController', ['$scope', function($scope) {
   $scope.apps = [ 
     { 
-      icon: 'resources/photo1cropped.jpg', 
-      title: 'MOVE', 
-      developer: 'MOVE, Inc.', 
-      price: 0.99 
+      icon: 'resources/photo1.jpg', 
+      name: 'MOVE', 
+      owner: 'MOVE, Inc.', 
+      adress: 'Warsaw'
     }, 
     { 
-      icon: 'resources/photo2cropped.jpg', 
-      title: 'Shutterbugg', 
-      developer: 'Chico Dusty', 
-      price: 2.99 
+      icon: 'resources/photo2.jpg', 
+      name: 'Shutterbugg', 
+      owner: 'Chico Dusty', 
+      adress: 'Warsaw' 
     },
     {
-      icon: 'resources/photo3cropped.jpg',
-      title: 'Gameboard',
-      developer: 'Armando P.',
-      price: 1.99
+      icon: 'resources/photo3.jpg',
+      name: 'Gameboard',
+      owner: 'Armando P.',
+      adress: 'Warsaw'
     }
-    /*,
+    ,
     {
       icon: 'resources/photo4.jpg',
-      title: 'Forecast',
-      developer: 'Forecast',
-      price: 1.99
+      name: 'Forecast',
+      owner: 'Forecast',
+      adress: 'Warsaw'
     },
     {
       icon: 'resources/photo5.jpg',
-      title: 'Forecast',
-      developer: 'Forecast',
-      price: 1.99
+      name: 'Forecast',
+      owner: 'Forecast',
+      adress: 'Warsaw'
     },
     {
       icon: 'resources/photo6.jpg',
-      title: 'Forecast',
-      developer: 'Forecast',
-      price: 1.99
+      name: 'Forecast',
+      owner: 'Forecast',
+      adress: 'Warsaw'
     },
     {
       icon: 'resources/photo7.jpg',
-      title: 'Forecast',
-      developer: 'Forecast',
-      price: 1.99
+      name: 'Forecast',
+      owner: 'Forecast',
+      adress: 'Warsaw'
     },
     {
       icon: 'resources/photo8.jpg',
-      title: 'Forecast',
-      developer: 'Forecast',
-      price: 1.99
-    }*/
+      name: 'Forecast',
+      owner: 'Forecast',
+      adress: 'Warsaw'
+    }
 
   ];
 }]);
