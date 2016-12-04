@@ -73,7 +73,7 @@ ToDo:
     	<div class="main" ng-controller="MainController">
   		<div class="container-fluid">
 			<div class="card" ng-repeat="app in apps">
-          		<app-info info="app" style="display: inline-block;"></app-info>
+          		<app-info info="app"></app-info>
     		</div>
    		</div>
 		</div>
@@ -81,86 +81,10 @@ ToDo:
 		</div>
 </div>
 
-	<!-- Main controller section
-	<div class="main" ng-controller="MainController">
-      <div class="container">
-         <div class="card" ng-repeat="app in apps">
-          <app-info info="app"></app-info>
-           
-        </div>
-      </div>
-    </div>
- -->
-
- <!-- To be refactored 
-	 <div ng-repeat="product in products" class="col-md-6"> 
-  		<div class="thumbnail"> 
-    			<img ng-src="{{product.cover}}"> 
-    			<p class="title">{{ product.name }}</p> 
-    			<p class="price">{{ product.price | currency }}</p> 
-    			<p class="date">{{ product.pubdate | date }}</p>
-    		<div class="rating">
-      			<p class="likes" ng-click="plusOne($index)">+{{product.likes}} </p>
-      			<p class="dislikes" ng-click="minusOne($index)">{{product.dislikes}}</p>
-    		</div>
-  		</div> 
-	</div>
-
- -->
-
-
-
-<!-- Galeria zdjec psow
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="resources/photo1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo1">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="resources/photo2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo2">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="resources/photo3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo3">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="resources/photo4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo4">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="resources/photo5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo5">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="resources/photo6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo6">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="resources/photo7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo7">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="resources/photo8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Photo8">
-    </div>
-  </div>
-</div>
-
--->
-
-
-<!-- Modal for full size images on click-->
-<!--
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
--->
-
-
 
 
 <!-- Contact Section -->
-<div class="w3-container w3-padding-128 w3-white" id="contact">
+<div class="w3-container w3-white" id="contact">
   <h3 class="w3-center">CONTACT</h3>
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
   <div class="w3-row-padding" style="margin-top:64px">
