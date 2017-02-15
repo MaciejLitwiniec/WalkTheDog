@@ -28,3 +28,17 @@ body, html {
     1px 1px 1px #000,
     1px 1px 1px #000;  
 }
+
+
+.card-custom {
+   overflow: hidden;
+   position: relative;
+   width: 23%;
+   display: inline-block;
+   margin: 0 2px;
+   position: relative;
+}
+
+.container-custom {
+   margin-bottom: 80px;
+}
