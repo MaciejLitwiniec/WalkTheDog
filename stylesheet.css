@@ -35,10 +35,10 @@ body, html {
    position: relative;
    width: 23%;
    display: inline-block;
-   margin: 0 2px;
+   margin: 0px 0px 0px 10px;
    position: relative;
 }
 
 .container-custom {
-   margin-bottom: 80px;
+   margin-bottom: 10px;
 }
