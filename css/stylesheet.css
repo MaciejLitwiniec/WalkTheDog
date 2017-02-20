@@ -1,0 +1,44 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("resources/background.jpg");
+    min-height: 100%;
+}
+.w3-navbar li a {
+    padding: 16px;
+    float: left;
+}
+#logo {
+  width: 24px;
+  height: 24px;
+}
+
+.stroke
+{
+    color: white;
+    text-shadow:
+    1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000;  
+}
+
+
+.card-custom {
+   overflow: hidden;
+   position: relative;
+   width: 23%;
+   display: inline-block;
+   margin: 0px 0px 0px 25px;
+   position: relative;
+}
+
+.container-custom {
+   margin-bottom: 10px;
+}
