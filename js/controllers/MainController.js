@@ -22,31 +22,31 @@ app.controller('MainController', ['$scope', function($scope) {
     {
       icon: 'resources/photo4.jpg',
       name: 'Forecast',
-      owner: 'Forecast',
+      owner: 'John Smith',
       adress: 'Warsaw'
     },
     {
       icon: 'resources/photo5.jpg',
-      name: 'Forecast',
-      owner: 'Forecast',
+      name: 'Jake',
+      owner: 'Jack Black',
       adress: 'Warsaw'
     },
     {
       icon: 'resources/photo6.jpg',
-      name: 'Forecast',
-      owner: 'Forecast',
+      name: 'Toby',
+      owner: 'Robert DeNiro',
       adress: 'Warsaw'
     },
     {
       icon: 'resources/photo7.jpg',
-      name: 'Forecast',
-      owner: 'Forecast',
+      name: 'Blake',
+      owner: 'Adam Sandler',
       adress: 'Warsaw'
     },
     {
       icon: 'resources/photo8.jpg',
-      name: 'Forecast',
-      owner: 'Forecast',
+      name: 'Fiter',
+      owner: 'Jason Smith',
       adress: 'Warsaw'
     }
 
