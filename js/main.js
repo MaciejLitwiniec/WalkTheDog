@@ -25,19 +25,36 @@ function w3_close() {
 
 
 //smooth scrolling
-$("a[href='#top']").click(function() {
-  $("html, body").animate({ scrollTop: 0 }, "slow");
-  return false;
-});
+
 
  $(document).ready(function (){
+             $("a[href='#top']").click(function() {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+            });
             $("a[href='#about']").click(function (){
                 $('html, body').animate({
                     scrollTop: $("#about").offset().top
                 }, 1000);
             });
-        });
+            $("a[href='#photo']").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#photo").offset().top
+                }, 1000);
+            });
+            $("a[href='#team']").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#team").offset().top
+                }, 1000);
+            });
+            $("a[href='#contact']").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#contact").offset().top
+                }, 1000);
+            });
 
+        });
+/**
  $(document).ready(function (){
             $("a[href='#photo']").click(function (){
                 $('html, body').animate({
@@ -61,3 +78,5 @@ $("a[href='#top']").click(function() {
                 }, 1000);
             });
         });
+
+*/
